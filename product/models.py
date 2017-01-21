@@ -15,8 +15,12 @@ class Product(models.Model):
 class Size(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     size = models.IntegerField()
+<<<<<<< HEAD
     count = models.IntegerField()
 
 class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField()
+=======
+    count = models.IntegerField()
+>>>>>>> origin/master
