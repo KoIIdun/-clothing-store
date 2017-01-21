@@ -1,23 +1,17 @@
 from django.contrib import admin
-from .models import Product, Size, Image
-=======
-from .models import Product, Size
->>>>>>> origin/master
+from .models import Product, Size, Imagefrom .models import Product, Size
 # Register your models here.
 
 class SizeAdmin(admin.TabularInline):
     model = Size
     extra = 1
 
-<<<<<<< HEAD
 class ImageAdmin(admin.TabularInline):
     model = Image
     extra = 1
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ImageAdmin, SizeAdmin]
-class ProductAdmin(admin.ModelAdmin):
-    inlines = [SizeAdmin]
     list_display = ('type', 'manufacturer', 'name', 'cost', 'new', 'sells')
     list_filter = ['type']
 
