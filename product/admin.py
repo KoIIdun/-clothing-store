@@ -1,5 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
 from .models import Product, Size, Image
 =======
 from .models import Product, Size
@@ -17,10 +16,8 @@ class ImageAdmin(admin.TabularInline):
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ImageAdmin, SizeAdmin]
-=======
 class ProductAdmin(admin.ModelAdmin):
     inlines = [SizeAdmin]
->>>>>>> origin/master
     list_display = ('type', 'manufacturer', 'name', 'cost', 'new', 'sells')
     list_filter = ['type']
 
