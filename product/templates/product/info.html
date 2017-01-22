@@ -1,5 +1,12 @@
-{{ product.type }}
-{{ product.name }}
-{% for size in list_size %}
-    <li>{{ size }}</li>
-{% endfor %}
+<html>
+    <head>
+        <title>{{ product.name }} | Voeu Cult</title>
+    </head>
+    <body>
+        {{ product.type }}
+        {{ product.name }}
+        {% for size in size_list %}
+            <li>{{ size.size }}</li>
+        {% endfor %}
+    </body>
+</html>

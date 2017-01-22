@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Size, Imagefrom .models import Product, Size
+from .models import Product, Size, Image
 # Register your models here.
 
 class SizeAdmin(admin.TabularInline):
@@ -12,7 +12,7 @@ class ImageAdmin(admin.TabularInline):
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ImageAdmin, SizeAdmin]
-    list_display = ('type', 'manufacturer', 'name', 'cost', 'new', 'sells')
-    list_filter = ['type']
+    list_display = ('id', 'type', 'manufacturer', 'name', 'cost', 'new', 'sells')
+    list_filter = ['type', 'id']
 
 admin.site.register(Product, ProductAdmin)
