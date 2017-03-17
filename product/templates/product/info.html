@@ -1,12 +1,67 @@
 <html>
     <head>
-        <title>{{ product.name }} | Voeu Cult</title>
+	<meta charset="utf-8">
+	<title>V&#339;u Cult.</title>
+	<link rel="stylesheet" href="/static/product/eneral.css" type="text/css">
+	
     </head>
-    <body>
-        {{ product.type }}
-        {{ product.name }}
-        {% for size in size_list %}
-            <li>{{ size.size }}</li>
-        {% endfor %}
+    <body style="margin: 0px">                                                                                
+	<div style="width: 100%; height: 100%; margin: 0 auto;">
+	    <div class="top_menu";>
+		<div class="sub_menu_table"> 
+		</div>
+	        <div style="background-color: #333;">                                                  
+		    <table class="menu_table">     
+			<tbody>
+			    <tr>
+				<td style="width:20%"><a href="http://127.0.0.1:8000/" class="menu-link title-size" data-title="Voeu_Cult">v&#339;u cult.</a></td>
+				<td style="width:7%"><a href="vk.com" class="menu-link hoverb" data-title="New">новинки</a></td>
+			        <td style="width:7%"><a href="vk.com" class="menu-link hoverb" data-title="Brand">бренды</a></td>
+				<td style="width:6%"><a href="vk.com" class="menu-link hoverb" data-title="Shoes">обувь</a></td>
+				<td style="width:7%"><a href="vk.com" class="menu-link hoverb" data-title="Man">мужское</a></td>
+				<td style="width:43%"><a href="vk.com" class="menu-link hoverb" data-title="Woman">женское</a></td>
+                                <td style="width:5%"><a href="vk.com" class="menu-link underline hoverb" data-title="Liked">Избранное</a></td>
+				<td style="width:5%"><a href="vk.com" class="menu-link underline hoverb" data-title="Stash" >Корзина</a></td>
+			    </tr>
+			</tbody>
+		    </table>
+		</div>
+	    </div>
+	    <div class="container">
+	        <div class="breadcrumbs">
+		    <ul>
+			<li><a href= "http://127.0.0.1:8000/">V&#339;u Cult.</a><span>/ </span></li>
+			<li><a href= "http://127.0.0.1:8000/{{product.manufacturer}}">{{product.manufacturer}}</a><span>/ </span></li>
+			<li>{{product.name}}</li>
+		    </ul>
+		</div>
+		<div class="main-container fluid">
+	            <div class="galery-container">
+		    
+		    </div>
+		    <div class="inform-container">
+		    	<div class="product-name">
+			    <h2>{{ product.manufacturer }}</h2>
+			    <h1>{{ product.name }}</h1>
+			    <h2>{{ product.cost }} $</h2>
+			</div>
+			<form> 
+			    <ul class="size-bottom">
+	                	{% for size in product.size_set.all %}
+				    <li>{{ size.size }}</li>
+				{% endfor %}
+			    </ul>
+			</form>
+		    </div> 
+		</div>    
+	    </div>
+	    <div class="down-line">
+		<div class="decor-line">
+		    <div class="logo">
+		        v&#339;u cult.    
+		    </div>
+	        </div>
+	    </div>
+	</div>
     </body>
 </html>
