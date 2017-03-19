@@ -12,7 +12,7 @@ class ImageAdmin(admin.TabularInline):
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ImageAdmin, SizeAdmin]
-    list_display = ('id', 'type', 'manufacturer', 'name', 'cost', 'new', 'sells')
+    list_display = ('id', 'type', 'manufacturer', 'index', 'year', 'name', 'cost', 'new', 'sells')
     list_filter = ['type', 'id']
 
 admin.site.register(Product, ProductAdmin)

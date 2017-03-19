@@ -60,7 +60,7 @@ a.hoverb:hover {font-weight: 900;}
 .galery-container {width: 791px; height: 624px; float: left;}
 .product-name {
     width: 100%;
-    height: 76px;
+    height: 100px;
     text-align: center;
 }
 .product-name h2 {
@@ -104,10 +104,16 @@ a.hoverb:hover {font-weight: 900;}
 
 .breadcrumbs ul li a {
   color: #b1b1b1;
+  font-size: 11px;
   text-decoration: none;
   font-weight: 400;
 }
-
+.breadcrumbs ul li span {
+  color: #b1b1b1;
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: 400;
+}
 .breadcrumbs ul li a:hover {
   color: #f02525;
 }
@@ -121,11 +127,18 @@ a.hoverb:hover {font-weight: 900;}
   color: #999;
 }
 
+ul.size-bottom {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
 .size-bottom li {
+    margin-bottom: 8px;
     display: inline-block;
     float: none;
-    height: 27px;
-    width: 45px;
+    height: 32px;
+    width: 48px;
 }
 
 .down-line {
@@ -146,4 +159,48 @@ a.hoverb:hover {font-weight: 900;}
     background-color: #333;
     height: 43px;
     width: 100%;
+}
+button.size-button {
+  font-size: 12px;
+  height: 32px;
+  width: 48px;
+  padding: 1px 6px;
+  border: 0px;
+  background-color: white;
+}
+button.size-button:hover {
+  height: 32px;
+  width: 46px;             
+  border: 1px solid #f4f4f4;
+}
+button.shop-button {
+  width: 100%;
+  height: 45px;
+  padding: 12px;
+  border: 0px;
+  background-color: black;
+}
+button.shop-button:hover {
+  background-color: red;
+}
+button.shop-button span {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.index-info {
+  width: 100%;
+  height: 50px;
+}
+.index-info ul {
+  text-align: center;
+  padding: 0px;
+}
+.index-info ul li, span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #525252;
 }

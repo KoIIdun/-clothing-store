@@ -1,8 +1,8 @@
 <html>
     <head>
 	<meta charset="utf-8">
-	<title>V&#339;u Cult.</title>
-	<link rel="stylesheet" href="/static/product/eneral.css" type="text/css">
+	<title>V&#339;u Cult. | {{product.name}}</title>
+	<link rel="stylesheet" href="/static/product/general.css" type="text/css">
 	
     </head>
     <body style="margin: 0px">                                                                                
@@ -43,15 +43,29 @@
 		    	<div class="product-name">
 			    <h2>{{ product.manufacturer }}</h2>
 			    <h1>{{ product.name }}</h1>
-			    <h2>{{ product.cost }} $</h2>
+			    <h2>${{ product.cost }}</h2>
 			</div>
 			<form> 
 			    <ul class="size-bottom">
 	                	{% for size in product.size_set.all %}
-				    <li>{{ size.size }}</li>
+				    <li><button class="size-button">{{ size.size }}</button></li>
 				{% endfor %}
 			    </ul>
 			</form>
+			<form>
+			    <button class="shop-button">
+				<span>В корзину</span>
+			    </button>
+			</form>
+			<div class="index-info">
+			    <ul>
+				<li>{{product.index}}</li>
+				<span>|</span>
+				<li>{{product.colors}}</li>
+                                <span>|</span>
+				<li>{{product.year}}</li>
+			    <ul>
+			</div>
 		    </div> 
 		</div>    
 	    </div>
