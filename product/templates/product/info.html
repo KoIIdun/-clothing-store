@@ -1,8 +1,8 @@
 <html>
     <head>
 	<meta charset="utf-8">
-	<title>V&#339;u Cult. | {{product.name}}</title>
-	<link rel="stylesheet" href="/static/product/general.css" type="text/css">
+	<title>v&#339;u cult. | {{product.name}}</title>
+	<link rel="stylesheet" href="/static/product/eneral.css" type="text/css">
 	
     </head>
     <body style="margin: 0px">                                                                                
@@ -37,7 +37,18 @@
 		</div>
 		<div class="main-container fluid">
 	            <div class="galery-container">
-		    
+		        <div class="image-view">
+			          
+			</div>
+			<div class="image-row">
+			    <ul>                      
+			        {% for image in product.image_set.all %}
+			    	    <li>                                          
+			    	        <img src= "/{{image.image}}" alt="Product Image">
+				    </li>
+				{% endfor %}
+			    </ul>
+			</div>
 		    </div>
 		    <div class="inform-container">
 		    	<div class="product-name">

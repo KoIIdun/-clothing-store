@@ -53,7 +53,7 @@ a.underline {text-decoration: underline;}
 a.title-size {font-size: 200%; font-family: times-new-roman;}
 .sub_menu_table {height: 60px}
 a.hoverb:hover {font-weight: 900;}
-.main-container {padding-bottom: 40px;width: 100%; height: 624px;}
+.main-container {padding-bottom: 40px;width: 100%; height: 664px;}
 .container {width: 1200px; height: 725px; margin-right: auto; margin-left: auto}
 .fluid {width: 100%}
 .inform-container {width: 382px; margin-left: 27px; float: left; height: 624px;}
@@ -62,6 +62,7 @@ a.hoverb:hover {font-weight: 900;}
     width: 100%;
     height: 100px;
     text-align: center;
+    margin-bottom: 20px; 
 }
 .product-name h2 {
     font-weight: 600;
@@ -204,3 +205,29 @@ button.shop-button span {
   font-weight: 700;
   color: #525252;
 }
+.image-view {
+  width: 100%;
+  height: 567px; 
+}
+.image-row {
+  width: 100%;
+  height: 57px;
+}
+.image-row ul {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 52px;
+  text-align: center;
+  display: inline-block;
+}
+.image-row ul li {
+  height: 52px;
+  margin-right: 10px;
+  width: 80px;
+  display: inline-block;
+  text-align: center;
+}
+.image-row ul li img {
+  height: 52px;
+  width: 80px;
