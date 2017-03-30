@@ -2,7 +2,7 @@
     <head>
 	<meta charset="utf-8">
 	<title>v&#339;u cult. | {{product.name}}</title>
-	<link rel="stylesheet" href="/static/product/eneral.css" type="text/css">
+	<link rel="stylesheet" href="/static/product/general.css" type="text/css">
 	
     </head>
     <body style="margin: 0px">                                                                                
@@ -38,17 +38,43 @@
 		<div class="main-container fluid">
 	            <div class="galery-container">
 		        <div class="image-view">
-			          
+			    <span class="left-arrow" onClick ="javascript: left_arrow()"><img src="/static/media/left.png"></span>
+			    <img src="{{product.image_set.first}}" id="product-img">         
+			    <span class="right-arrow" onClick ="javascript: right_arrow()"><img src="/static/media/right.png"></span> 
 			</div>
 			<div class="image-row">
 			    <ul>                      
 			        {% for image in product.image_set.all %}
 			    	    <li>                                          
-			    	        <img src= "/{{image.image}}" alt="Product Image">
+			    	        <img src = "/static/{{image.image}}" alt="Product Image">
 				    </li>
 				{% endfor %}
 			    </ul>
 			</div>
+			<script type="text/javascript">
+			    var mas = [
+				{% for image in product.image_set.all %}
+				   "/static/{{image.image}}", 
+				{% endfor %}
+			    ]
+			    var to = 0;
+			    function right_arrow() {
+			        var object = document.getElementById("product-img");
+				if (to < mas.length - 1) 
+				    to++;
+				else
+				    to = 0;
+				    object.src = mas[to];
+			    }
+			    function left_arrow() {
+			        var object = document.getElementById("product-img");
+				if (to > 0) 
+				    to--;
+				else
+				    to = mas.length - 1;
+				    object.src = mas[to];
+			    } 
+			</script>
 		    </div>
 		    <div class="inform-container">
 		    	<div class="product-name">

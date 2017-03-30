@@ -206,6 +206,7 @@ button.shop-button span {
   color: #525252;
 }
 .image-view {
+  position: relative;
   width: 100%;
   height: 567px; 
 }
@@ -231,3 +232,27 @@ button.shop-button span {
 .image-row ul li img {
   height: 52px;
   width: 80px;
+}
+.image-view img {
+  height: 100%;
+  width: 100%;
+}
+.image-view span {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+}           
+span.left-arrow {
+  left: 0px;
+  background-position: -140px -773px;
+  text-align: center;
+  top: 50%;
+  cursor: pointer;
+}
+span.right-arrow {
+  right: 0px;
+  background-position: -188px -773px;
+  text-align: center;
+  top: 50%;
+  cursor: pointer;
+}

@@ -121,5 +121,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/Users/Kolldun/PycharmProjects/voeucult/product'
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_PATH, "static"),
+)
+
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'static')
+
                            

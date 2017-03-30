@@ -1,0 +1,7 @@
+html {font-family: sans-serif;}
+.top_menu {height: 113px;}
+table.menu_table {height: 40px; width: 1400px; margin: auto;}
+a.menu-link {color: white; padding: 15px; text-decoration: none; font-size: 80%;}
+a.underline {text-decoration: underline;}
+a.title-size {font-size: 250%; font-family: times-new-roman;}
+.sub_menu_table {height: 60px}
