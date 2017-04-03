@@ -3,6 +3,7 @@
 	<meta charset="utf-8">
 	<title>v&#339;u cult. | {{product.name}}</title>
 	<link rel="stylesheet" href="/static/product/general.css" type="text/css">
+        <script type="text/javascript" src="https://vk.com/js/api/share.js?94" charset="windows-1251"></script>
 	
     </head>
     <body style="margin: 0px">                                                                                
@@ -10,7 +11,7 @@
 	    <div class="top_menu";>
 		<div class="sub_menu_table"> 
 		</div>
-	        <div style="background-color: #333;">                                                  
+	        <div style="background-color: #333; height: 46px;">                                                  
 		    <table class="menu_table">     
 			<tbody>
 			    <tr>
@@ -39,15 +40,15 @@
 	            <div class="galery-container">
 		        <div class="image-view">
 			    <span class="left-arrow" onClick ="javascript: left_arrow()"><img src="/static/media/left.png"></span>
-			    <img src="{{product.image_set.first}}" id="product-img">         
+			    <img src="/static/{{product.image_set.first.image}}" id="product-img">         
 			    <span class="right-arrow" onClick ="javascript: right_arrow()"><img src="/static/media/right.png"></span> 
 			</div>
 			<div class="image-row">
-			    <ul>                      
+			    <ul>                    
 			        {% for image in product.image_set.all %}
-			    	    <li>                                          
-			    	        <img src = "/static/{{image.image}}" alt="Product Image">
-				    </li>
+				    <li>                                          
+			    	        <img class="image-icon" src="/static/{{image.image}}" id="{{forloop.counter0}}" onClick="javascript: clickimage({{forloop.counter0}})">
+				    </li>       
 				{% endfor %}
 			    </ul>
 			</div>
@@ -64,7 +65,9 @@
 				    to++;
 				else
 				    to = 0;
-				    object.src = mas[to];
+				object.src = mas[to];
+				var obj = document.getElementById(to);
+				obj.opacity = 1.3;
 			    }
 			    function left_arrow() {
 			        var object = document.getElementById("product-img");
@@ -72,7 +75,24 @@
 				    to--;
 				else
 				    to = mas.length - 1;
-				    object.src = mas[to];
+				object.src = mas[to];
+				var obj = document.getElementById(to);
+				obj.opacity = 0.3;
+
+			    }
+			    function clear_icons() {
+			        for (var i = 0; i < mas.length; i++) {
+			            var obj = document.getElementById(String(i));
+				    obj.opacity = 1;    
+				}
+			    }
+			    function clickimage(number) {
+			        clear_icons();
+				var object = document.getElementById(String(number));
+				var obj = document.getElementById("product-img");
+				object.opacity = 0.3;
+				obj.src = mas[number];
+				to = number;
 			    } 
 			</script>
 		    </div>
@@ -102,6 +122,13 @@
                                 <span>|</span>
 				<li>{{product.year}}</li>
 			    <ul>
+			</div>
+			<div class="social-nets">
+			    <div class="bttn-block">
+			        <a target="_blank" href="http://twitter.com/home?status=http://127.0.0.1:8000/product/{{product.id}}/"><img src="/static/media/tweet.png"></a>
+				<a target="_blank" href="http://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/product/{{product.id}}/"><img src="/static/media/facebook.png"></a>        
+			        <a class="vk-repost" href="https://vk.com/share.php?url=http://127.0.0.1:8000/product/{{product.id}}/" target="_blank">В</a>
+			    </div>			    
 			</div>
 		    </div> 
 		</div>    

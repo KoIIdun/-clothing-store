@@ -47,7 +47,7 @@ h6 {
 }
 
 .top_menu {height: 103px;}
-table.menu_table {height: 40px; width: 1200px; margin: auto;}
+table.menu_table {height: 46px; width: 1200px; margin: auto;}
 a.menu-link {color: white;  padding: 5px; text-decoration: none; font-size: 95%;}
 a.underline {text-decoration: underline;}
 a.title-size {font-size: 200%; font-family: times-new-roman;}
@@ -173,6 +173,7 @@ button.size-button:hover {
   height: 32px;
   width: 46px;             
   border: 1px solid #f4f4f4;
+  cursor: pointer;
 }
 button.shop-button {
   width: 100%;
@@ -180,6 +181,7 @@ button.shop-button {
   padding: 12px;
   border: 0px;
   background-color: black;
+  cursor: pointer;
 }
 button.shop-button:hover {
   background-color: red;
@@ -193,11 +195,12 @@ button.shop-button span {
 }
 .index-info {
   width: 100%;
-  height: 50px;
+  height: 19px;
 }
 .index-info ul {
   text-align: center;
   padding: 0px;
+  margin: 0px;
 }
 .index-info ul li, span {
   display: inline-block;
@@ -241,7 +244,8 @@ button.shop-button span {
   position: absolute;
   height: 30px;
   width: 30px;
-}           
+  display: none;
+}          
 span.left-arrow {
   left: 0px;
   background-position: -140px -773px;
@@ -255,4 +259,45 @@ span.right-arrow {
   text-align: center;
   top: 50%;
   cursor: pointer;
+}
+
+.image-view:hover span {
+  display: block; 
+}
+.image-icon {
+  opacity: 1;
+  cursor: pointer;
+}
+.image-icon:hover {
+  opacity: 0.3;
+}
+.social-nets {
+  margin-top: 18px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #eaeaea;
+  border-top: 1px solid #eaeaea;
+}
+.bttn-block {
+  padding: 10px 12px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+} 
+.bttn-block a {
+  height: 20px;
+  width: 20px;
+  margin: 0px 10px;
+  font-weight: 900;
+}
+.bttn-block a:hover {
+  opacity: 0.3;
+}
+a.vk-repost {
+  position: relative;
+  text-decoration: none;
+  color: #525252;     
+  top: -3px;
+  font-size: 18px;
 }
