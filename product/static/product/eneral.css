@@ -46,10 +46,11 @@ h6 {
     font-size: 12px
 }
 
-.top_menu {height: 103px;}
+.top_menu {height: 106px;}
 table.menu_table {height: 46px; width: 1200px; margin: auto;}
 a.menu-link {color: white;  padding: 5px; text-decoration: none; font-size: 95%;}
 a.underline {text-decoration: underline;}
+a.menu_table:hover {display: none;}
 a.title-size {font-size: 200%; font-family: times-new-roman;}
 .sub_menu_table {height: 60px}
 a.hoverb:hover {font-weight: 900;}
@@ -300,4 +301,22 @@ a.vk-repost {
   color: #525252;     
   top: -3px;
   font-size: 18px;
+}
+.menu-d {
+  background-color: #333;
+  height: 46px;
+  position: relative;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.fixed-x { 
+  transition: 0.1s ease;
+}    
+#product-img {
+  z-index: 0;
 }
